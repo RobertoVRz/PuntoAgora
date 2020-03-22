@@ -36,10 +36,11 @@ export default {
   font-size: 3rem !important
 
 .Fondo
-  background-image: url("../assets/fondos/verdesito.jpg")
+  background-image: url("../assets/fondos/verde.jpg")
   width: 100vw
   height: 100vh
 
 .imagen
-  //background-color: black
+  margin-top: -5rem
+  margin-bottom: 5rem
 </style>
