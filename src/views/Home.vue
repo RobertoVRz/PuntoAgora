@@ -1,22 +1,27 @@
 <template>
-  <div class="Fondo d-flex flex-row align-center justify-center">
+  <div class="Fondo d-flex flex-column">
     <img alt="logo" src="../assets/logo.png" />
     <v-container>
       <v-btn>Nosotros</v-btn>
       <v-btn>Proyectos</v-btn>
       <v-btn>Contacto</v-btn>
     </v-container>
+    <Nosotros v-if="nosotros" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-//import HelloWorld from '@/components/HelloWorld.vue'
+import Nosotros from '@/components/Nosotros.vue'
 
 export default {
   name: 'Home',
+  data() {
+    return {
+      nosotros: false
+    }
+  },
   components: {
-    //HelloWorld
+    Nosotros
   }
 }
 </script>
