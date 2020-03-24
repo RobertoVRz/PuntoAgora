@@ -27,44 +27,15 @@
         </v-container>
       </kinesis-element>
     </kinesis-container>
-    <Nosotros v-if="nosotros" />
+
     <v-dialog v-model="dialog" width="600px">
       <v-card class="cardDialog" v-if="titulo === 'Nosotros'">
         <v-card-title class="d-flex justify-center">
           <span class="Font">{{ titulo }}</span>
         </v-card-title>
         <v-card-text class="white--text">
-          <v-row>
-            <v-col
-              class="d-flex flex-row justify-center align-center"
-              cols="12"
-            >
-              <v-avatar color="white" size="150">
-                <img
-                  src="https://cdn.vuetifyjs.com/images/john.jpg"
-                  class="perfil"
-                /> </v-avatar
-            ></v-col>
-            <v-col
-              class="d-flex flex-row justify-center align-center"
-              cols="12"
-            >
-              <v-avatar color="white" size="150">
-                <img
-                  src="https://cdn.vuetifyjs.com/images/john.jpg"
-                  class="perfil"
-                />
-              </v-avatar>
-
-              <v-avatar color="white" size="150" class="ml-10">
-                <img
-                  lazy-src="https://cdn.vuetifyjs.com/images/john.jpg"
-                  src="https://cdn.vuetifyjs.com/images/john.jpg"
-                  class="perfil"
-                /> </v-avatar
-            ></v-col>
-          </v-row>
-        </v-card-text>
+          <Nosotros v-if="titulo === 'Nosotros'"
+        /></v-card-text>
       </v-card>
 
       <v-card class="cardDialog" v-if="titulo === 'Proyectos'">
@@ -79,24 +50,7 @@
           <span class="Font">{{ titulo }}</span>
         </v-card-title>
         <v-card-text class="white--text">
-          <v-container class="d-flex flex-column align-center ">
-            <div class="d-flex flex-row">
-              <v-icon color="white">mdi-phone</v-icon>
-              <h2>2222659298</h2>
-            </div>
-            <div class="d-flex flex-row">
-              <v-icon color="white">mdi-email</v-icon>
-              <h2>apuntoagora@gmail.com</h2>
-            </div>
-            <div class="d-flex flex-row">
-              <v-icon color="white">mdi-facebook</v-icon>
-              <h2>@puntoagora https://www.facebook.com/puntoagora/</h2>
-            </div>
-            <div class="d-flex flex-row">
-              <v-icon color="white">mdi-instagram</v-icon>
-              <h2>@puntoagora https://www.instagram.com/puntoagora/</h2>
-            </div>
-          </v-container>
+          <Contacto v-if="titulo === 'Contacto'" />
         </v-card-text>
       </v-card>
     </v-dialog>
@@ -105,6 +59,7 @@
 
 <script>
 import Nosotros from '@/components/Nosotros.vue'
+import Contacto from '@/components/Contacto.vue'
 import imagen from '../assets/logos/logo200px.png'
 import { KinesisContainer, KinesisElement } from 'vue-kinesis'
 
@@ -115,13 +70,14 @@ export default {
       nosotros: false,
       dialog: false,
       titulo: '',
-      imagen,
-      KinesisContainer,
-      KinesisElement
+      imagen
     }
   },
   components: {
-    Nosotros
+    Nosotros,
+    Contacto,
+    KinesisContainer,
+    KinesisElement
   },
   methods: {
     elegir(titulo) {
@@ -156,8 +112,5 @@ export default {
   color: white
   font-size: 40px
 
-.perfil:hover
-  height: 200px
-  width: 200px
-  cursor: pointer
+
 </style>
