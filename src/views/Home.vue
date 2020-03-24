@@ -1,22 +1,32 @@
 <template>
   <div class="Fondo d-flex flex-column align-center justify-center">
-    <img
-      alt="logo"
-      height="500px"
-      class="imagen"
-      src="../assets/logos/logopro.svg"
-    />
-    <v-container class="d-flex flex-row justify-space-around">
-      <v-btn color="white" @click="elegir('Nosotros')" text class="btnModal"
-        >Nosotros</v-btn
-      >
-      <v-btn color="white" @click="elegir('Proyectos')" text class="btnModal"
-        >Proyectos</v-btn
-      >
-      <v-btn color="white" @click="elegir('Contacto')" text class="btnModal"
-        >Contacto</v-btn
-      >
-    </v-container>
+    <kinesis-container>
+      <kinesis-element :strength="20">
+        <img
+          alt="logo"
+          height="500px"
+          class="imagen"
+          src="../assets/logos/logopro.svg"
+        />
+      </kinesis-element>
+      <kinesis-element :strength="10">
+        <v-container class="d-flex flex-row justify-space-around">
+          <v-btn color="white" @click="elegir('Nosotros')" text class="btnModal"
+            >Nosotros</v-btn
+          >
+          <v-btn
+            color="white"
+            @click="elegir('Proyectos')"
+            text
+            class="btnModal"
+            >Proyectos</v-btn
+          >
+          <v-btn color="white" @click="elegir('Contacto')" text class="btnModal"
+            >Contacto</v-btn
+          >
+        </v-container>
+      </kinesis-element>
+    </kinesis-container>
     <Nosotros v-if="nosotros" />
     <v-dialog v-model="dialog" width="600px">
       <v-card class="cardDialog" v-if="titulo === 'Nosotros'">
@@ -96,6 +106,7 @@
 <script>
 import Nosotros from '@/components/Nosotros.vue'
 import imagen from '../assets/logos/logo200px.png'
+import { KinesisContainer, KinesisElement } from 'vue-kinesis'
 
 export default {
   name: 'Home',
@@ -104,7 +115,9 @@ export default {
       nosotros: false,
       dialog: false,
       titulo: '',
-      imagen
+      imagen,
+      KinesisContainer,
+      KinesisElement
     }
   },
   components: {

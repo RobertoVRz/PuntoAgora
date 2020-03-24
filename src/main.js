@@ -4,6 +4,9 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
+import VueKinesis from 'vue-kinesis'
+
+Vue.use(VueKinesis)
 
 Vue.config.productionTip = false
 
