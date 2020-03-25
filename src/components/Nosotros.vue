@@ -7,10 +7,7 @@
         size="150"
         v-show="persona === 'Al' || persona === ''"
       >
-        <img
-          src="https://cdn.vuetifyjs.com/images/john.jpg"
-          class="perfil"
-        /> </v-avatar
+        <v-img src="../assets/al.jpeg" class="perfil" /> </v-avatar
       ><v-card v-show="persona === 'Al'"
         ><p>
           Coordinador y miembro de Punto Ágora. Licenciado en Artes Plásticas
@@ -43,7 +40,7 @@
         size="150"
         v-show="persona === 'Rob' || persona === ''"
       >
-        <img src="https://cdn.vuetifyjs.com/images/john.jpg" class="perfil" />
+        <img src="../assets/rob.jpg" id="rob" class="perfil" />
       </v-avatar>
       <v-card v-show="persona === 'Rob'"
         ><p>
@@ -132,7 +129,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="sass">
 .perfil:hover
-  height: 200px
-  width: 200px
+  height: 350px
+  width: 350px
   cursor: pointer
+
+#rob:hover
+  margin-left: -1.5rem
 </style>

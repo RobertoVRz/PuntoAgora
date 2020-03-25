@@ -111,6 +111,4 @@ export default {
   font-family: 'B612', sans-serif
   color: white
   font-size: 40px
-
-
 </style>
