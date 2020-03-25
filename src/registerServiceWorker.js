@@ -18,9 +18,15 @@ if (process.env.NODE_ENV === 'production') {
     },
     updatefound() {
       console.log('New content is downloading.')
+      alert(
+        'Hay nuevo contenido disponible. Haz click en aceptar para comenzar la descarga en segundo plano.'
+      )
     },
     updated() {
       console.log('New content is available; please refresh.')
+      alert(
+        'Aplicación actualizada, cierre por completo la aplicación y vuelve a entrar para ver los nuevos cambios'
+      )
     },
     offline() {
       console.log(
