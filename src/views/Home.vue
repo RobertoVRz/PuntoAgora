@@ -42,7 +42,8 @@
         <v-card-title class="d-flex justify-center">
           <span class="Font">{{ titulo }}</span>
         </v-card-title>
-        <v-card-text class="white--text"> </v-card-text>
+        <v-card-text class="white--text">
+          <Proyectos v-if="titulo === 'Proyectos'" /> </v-card-text>
       </v-card>
 
       <v-card class="cardDialog" v-if="titulo === 'Contacto'">
@@ -60,6 +61,7 @@
 <script>
 import Nosotros from '@/components/Nosotros.vue'
 import Contacto from '@/components/Contacto.vue'
+import Proyectos from '@/components/Proyectos.vue'
 import imagen from '../assets/logos/logo200px.png'
 import { KinesisContainer, KinesisElement } from 'vue-kinesis'
 
@@ -76,6 +78,7 @@ export default {
   components: {
     Nosotros,
     Contacto,
+    Proyectos,
     KinesisContainer,
     KinesisElement
   },
