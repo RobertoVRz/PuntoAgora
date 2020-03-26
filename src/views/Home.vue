@@ -28,7 +28,7 @@
       </kinesis-element>
     </kinesis-container>
 
-    <v-dialog v-model="dialog" width="600px">
+    <v-dialog v-model="dialog" width="80vw">
       <v-card class="cardDialog" v-if="titulo === 'Nosotros'">
         <v-card-title class="d-flex justify-center">
           <span class="Font">{{ titulo }}</span>
@@ -43,7 +43,8 @@
           <span class="Font">{{ titulo }}</span>
         </v-card-title>
         <v-card-text class="white--text">
-          <Proyectos v-if="titulo === 'Proyectos'" /> </v-card-text>
+          <Proyectos v-if="titulo === 'Proyectos'" />
+        </v-card-text>
       </v-card>
 
       <v-card class="cardDialog" v-if="titulo === 'Contacto'">
