@@ -103,7 +103,7 @@ export default {
   margin-bottom: 5rem
 
 .cardDialog
-  background-image: url("../assets/fondos/verde.jpg")
+  background-image: url("../assets/fondos/amarillo.jpg")
   background-position: center center
   background-size: cover
 

@@ -1,5 +1,5 @@
 <template>
-  <v-container class="d-flex flex-column align-center ">
+  <v-container class="d-flex flex-column align-center todo">
     <div class="d-flex flex-row linki">
       <v-icon color="white">mdi-phone</v-icon>
       <h2>2222659298</h2>
@@ -35,4 +35,9 @@
     text-decoration: none !important
     color: white
     margin-bottom: 1rem
+
+.todo
+  background-color: rgba(116,207,206,0.8)
+  border-radius: 25px
+  padding: 2rem
 </style>
