@@ -65,9 +65,9 @@
           <span class="Font">{{ titulo }}</span>
         </v-card-title>
         <v-card-text class="white--text">
-          <Riegen v-if="titulo === 'Riegen2'" />
-          <Riegen2 v-if="titulo === 'Riegen2'" />
-          <Riegen3 v-if="titulo === 'Riegen'" />
+          <Riegen v-if="titulo === 'Riegen'" />
+          <Riegen2 v-if="titulo === 'Riegen'" />
+          <Riegen3 v-if="titulo === 'Riegen2'" />
         </v-card-text>
       </v-card>
     </v-dialog>
