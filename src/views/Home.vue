@@ -65,7 +65,9 @@
           <span class="Font">{{ titulo }}</span>
         </v-card-title>
         <v-card-text class="white--text">
-          <Riegen v-if="titulo === 'Riegen'" />
+          <Riegen v-if="titulo === 'Riegen2'" />
+          <Riegen2 v-if="titulo === 'Riegen2'" />
+          <Riegen3 v-if="titulo === 'Riegen'" />
         </v-card-text>
       </v-card>
     </v-dialog>
@@ -77,6 +79,8 @@ import Nosotros from '@/components/Nosotros.vue'
 import Contacto from '@/components/Contacto.vue'
 import Proyectos from '@/components/Proyectos.vue'
 import Riegen from '@/components/Riegen.vue'
+import Riegen2 from '@/components/Riegen2.vue'
+import Riegen3 from '@/components/Riegen3.vue'
 import imagen from '../assets/logos/logo200px.png'
 import { KinesisContainer, KinesisElement } from 'vue-kinesis'
 
@@ -95,6 +99,8 @@ export default {
     Contacto,
     Proyectos,
     Riegen,
+    Riegen2,
+    Riegen3,
     KinesisContainer,
     KinesisElement
   },
