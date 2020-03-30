@@ -10,10 +10,10 @@
     />
     <v-img
       class="imagens"
-      height="100px"
+      height="230px"
       contain
       id="on"
-      v-if="on"
+      v-show="on"
       src="../assets/riegen/nanosOn.png"
     />
     <v-img
@@ -21,6 +21,7 @@
       height="200px"
       contain
       id="off"
+      v-show="!on"
       src="../assets/riegen/nanoxOff.png"
     />
     <v-img
@@ -32,7 +33,6 @@
     />
     <Vue2InteractDraggable
       @draggedDown="draggedDown"
-      interact-max-rotation="15"
       interact-y-threshold="600"
       interact-lock-x-axis
       interact-lock-swipe-up
@@ -44,6 +44,7 @@
         src="../assets/riegen/brocha.png"
       />
     </Vue2InteractDraggable>
+    <div class="cuadro2" @mouseover="on = true" @mouseout="on = false"></div>
   </v-container>
 </template>
 
@@ -78,6 +79,15 @@ export default {
   margin-top: 0rem
   z-index: 9
 
+.cuadro2
+  height: 50px
+  width: 120px
+  background-color: transparent
+  position: absolute
+  margin-left: 10rem
+  margin-top: 5rem
+  z-index: 9
+
 #cosa
   margin-left: -15rem
   margin-top: 3rem
@@ -85,6 +95,11 @@ export default {
 #off
   margin-left: -8rem
   margin-top: 1rem
+  z-index: 99
+
+#on
+  margin-left: -11.5rem
+  margin-top: 0rem
   z-index: 99
 
 #brocha

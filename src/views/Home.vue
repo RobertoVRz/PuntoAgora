@@ -120,6 +120,7 @@ export default {
 .imagen
   margin-top: -5rem
   margin-bottom: 5rem
+  margin-left: 5rem !important
 
 .cardDialog
   background-image: url("../assets/fondos/amarillo.jpg")
