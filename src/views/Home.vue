@@ -24,6 +24,10 @@
           <v-btn color="white" @click="elegir('Contacto')" text class="btnModal"
             >Contacto</v-btn
           >
+
+          <v-btn color="white" @click="elegir('Riegen')" text class="btnModal"
+            >Riegen</v-btn
+          >
         </v-container>
       </kinesis-element>
     </kinesis-container>
@@ -55,6 +59,15 @@
           <Contacto v-if="titulo === 'Contacto'" />
         </v-card-text>
       </v-card>
+
+      <v-card class="cardDialog" v-if="titulo === 'Riegen'">
+        <v-card-title class="d-flex justify-center">
+          <span class="Font">{{ titulo }}</span>
+        </v-card-title>
+        <v-card-text class="white--text">
+          <Riegen v-if="titulo === 'Riegen'" />
+        </v-card-text>
+      </v-card>
     </v-dialog>
   </div>
 </template>
@@ -63,6 +76,7 @@
 import Nosotros from '@/components/Nosotros.vue'
 import Contacto from '@/components/Contacto.vue'
 import Proyectos from '@/components/Proyectos.vue'
+import Riegen from '@/components/Riegen.vue'
 import imagen from '../assets/logos/logo200px.png'
 import { KinesisContainer, KinesisElement } from 'vue-kinesis'
 
@@ -80,6 +94,7 @@ export default {
     Nosotros,
     Contacto,
     Proyectos,
+    Riegen,
     KinesisContainer,
     KinesisElement
   },
