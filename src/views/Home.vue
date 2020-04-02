@@ -64,10 +64,21 @@
         <v-card-title class="d-flex justify-center">
           <span class="Font">{{ titulo }}</span>
         </v-card-title>
-        <v-card-text class="white--text">
-          <Riegen v-if="titulo === 'Riegen'" />
-          <Riegen2 v-if="titulo === 'Riegen'" />
-          <Riegen3 v-if="titulo === 'Riegen2'" />
+        <v-card-text class="white--text cardRiegen">
+          <div class="d-flex flex-row justify-center align-center mb-3">
+            <v-btn class="mr-5" width="8rem" @click="Riegen = 'Riegen'"
+              >Prototipo 1</v-btn
+            >
+            <v-btn class="mr-5" width="8rem" @click="Riegen = 'Riegen2'"
+              >Prototipo 2</v-btn
+            >
+            <v-btn class="mr-5" width="8rem" @click="Riegen = 'Riegen3'"
+              >Prototipo 3</v-btn
+            >
+          </div>
+          <Riegen v-if="Riegen === 'Riegen'" />
+          <Riegen2 v-if="Riegen === 'Riegen2'" />
+          <Riegen3 v-if="Riegen === 'Riegen3'" />
         </v-card-text>
       </v-card>
     </v-dialog>
@@ -90,6 +101,7 @@ export default {
     return {
       nosotros: false,
       dialog: false,
+      Riegen: 'default',
       titulo: '',
       imagen
     }
@@ -137,4 +149,7 @@ export default {
   font-family: 'B612', sans-serif
   color: white
   font-size: 40px
+
+.cardRiegen
+  //background-color: black
 </style>

@@ -10,7 +10,7 @@
     />
     <v-img
       class="imagens"
-      height="230px"
+      height="290px"
       contain
       id="on"
       v-show="on"
@@ -18,7 +18,7 @@
     />
     <v-img
       class="imagens"
-      height="200px"
+      height="250px"
       contain
       id="off"
       v-show="!on"
@@ -58,6 +58,7 @@ export default {
 .conteneodr
   height: 500px
   width: 500px
+  padding-top: 3rem
   background-color: white
 
 .imagens
@@ -82,17 +83,17 @@ export default {
   z-index: 9
 
 #cosa
-  margin-left: -22rem
+  margin-left: -21rem
   margin-top: 3rem
 
 #off
-  margin-left: -10rem
-  margin-top: 1rem
+  margin-left: -9rem
+  margin-top: -2rem
   z-index: 99
 
 #on
-  margin-left: -11.5rem
-  margin-top: 0rem
+  margin-left: -12.3rem
+  margin-top: -3.3rem
   z-index: 99
 
 #brocha

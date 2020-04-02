@@ -101,11 +101,7 @@
         class="ml-10"
         v-show="persona === ''"
       >
-        <img
-          lazy-src="https://cdn.vuetifyjs.com/images/john.jpg"
-          src="https://cdn.vuetifyjs.com/images/john.jpg"
-          class="perfil"
-        />
+        <img id="gabo" src="../assets/gabo.jpeg" class="perfil" />
       </v-avatar>
       <div v-show="persona === 'Gabo'">
         <div class="d-flex flex-column align-center todo">
@@ -117,9 +113,10 @@
             v-show="persona === 'Gabo' || persona === ''"
           >
             <img
-              lazy-src="https://cdn.vuetifyjs.com/images/john.jpg"
-              src="https://cdn.vuetifyjs.com/images/john.jpg"
+              lazy-src="../assets/gabo.jpeg"
+              src="../assets/gabo.jpeg"
               class="perfil"
+              id="gabo"
             />
           </v-avatar>
           <p class="headline ">
@@ -182,6 +179,11 @@ export default {
 
 #rob:hover
   margin-left: -1.5rem
+
+#gabo:hover
+  height: 200px
+  width: 200px
+  mergin-top: -1.5rem !important
 
 .equis
   font-size: 3rem !important
