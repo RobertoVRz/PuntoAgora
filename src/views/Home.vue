@@ -1,36 +1,48 @@
 <template>
   <div class="Fondo d-flex flex-column align-center justify-center">
-    <kinesis-container>
-      <kinesis-element :strength="20">
-        <img
-          alt="logo"
-          height="500px"
-          class="imagen"
-          src="../assets/logos/logopro.svg"
-        />
-      </kinesis-element>
-      <kinesis-element :strength="10">
-        <v-container class="d-flex flex-row justify-space-around">
-          <v-btn color="white" @click="elegir('Nosotros')" text class="btnModal"
-            >Nosotros</v-btn
+    <div>
+      <kinesis-container>
+        <kinesis-element :strength="20">
+          <img
+            alt="logo"
+            height="500px"
+            class="imagen"
+            src="../assets/logos/logopro.svg"
+          />
+        </kinesis-element>
+        <kinesis-element :strength="10">
+          <div
+            class="contenedorMenu d-flex flex-row flex-wrap align-center justify-space-around"
           >
-          <v-btn
-            color="white"
-            @click="elegir('Proyectos')"
-            text
-            class="btnModal"
-            >Proyectos</v-btn
-          >
-          <v-btn color="white" @click="elegir('Contacto')" text class="btnModal"
-            >Contacto</v-btn
-          >
+            <v-btn
+              color="white"
+              @click="elegir('Nosotros')"
+              text
+              class="btnModal"
+              >Nosotros</v-btn
+            >
+            <v-btn
+              color="white"
+              @click="elegir('Proyectos')"
+              text
+              class="btnModal"
+              >Proyectos</v-btn
+            >
+            <v-btn
+              color="white"
+              @click="elegir('Contacto')"
+              text
+              class="btnModal"
+              >Contacto</v-btn
+            >
 
-          <v-btn color="white" @click="elegir('Riegen')" text class="btnModal"
-            >Riegen</v-btn
-          >
-        </v-container>
-      </kinesis-element>
-    </kinesis-container>
+            <v-btn color="white" @click="elegir('Riegen')" text class="btnModal"
+              >Riegen</v-btn
+            >
+          </div>
+        </kinesis-element>
+      </kinesis-container>
+    </div>
 
     <v-dialog v-model="dialog" width="80vw">
       <v-card class="cardDialog" v-if="titulo === 'Nosotros'">
@@ -131,8 +143,8 @@ export default {
 
 .Fondo
   background-image: url("../assets/fondos/verdesito.jpg")
-  width: 100vw
-  height: 100vh
+  width: 100% !important
+  height: 100% !important
   background-size: cover
 
 .imagen
@@ -152,4 +164,23 @@ export default {
 
 .cardRiegen
   //background-color: black
+
+.lolo
+  background-color: black
+  width: 100vw
+
+@media only screen and (max-width: 600px)
+  .imagen
+    height: 300px !important
+    margin-top: 0rem !important
+    margin-bottom: 0rem !important
+    margin-left: 0rem !important
+
+  .btnModal
+    margin-top: 2rem !important
+    margin-left: 12rem !important
+    font-size: 2rem !important
+
+  .contenedorMenu
+    width: 90vw
 </style>
